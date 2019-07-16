@@ -9,6 +9,7 @@ class Home extends Controller {
 		$this->view('templates/header', $data);
 		$this->view('home/index', $data);
 		$this->view('templates/footer');
+		// print_r(PDO::getAvailableDrivers());
 	}
 	public function coba()
 	{	
