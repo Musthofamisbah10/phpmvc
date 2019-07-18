@@ -74,6 +74,7 @@ class Database {
 	}
 
 	// untuk menghitung ada berapa baris yang berubah pada database
+	// tes git
 	public function rowCount()
 	{
 		return $this->stmt->rowCount();
