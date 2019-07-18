@@ -17,9 +17,11 @@
 			<h3>Data Mahasiswa</h3>
 			<ul class="list-group">
 				<?php foreach($data['mhs'] as $mhs) : ?>
-				  	<li class="list-group-item d-flex justify-content-between align-items-center">
+				  	<li class="list-group-item ">
 				  		<?= $mhs['nama']; ?>
-				  		<a href="<?= BASEURL;?>/mahasiswa/detile/<?= $mhs['id']; ?>" class="badge badge-primary">Detile</a>
+				  		<a href="<?= BASEURL;?>/mahasiswa/detile/<?= $mhs['id']; ?>" class="badge badge-primary float-right ml-1">Detile</a>
+				  		<a href="<?= BASEURL;?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-1" data-toggle="modal" data-target="#formModal">Ubah</a>
+				  		<a href="<?= BASEURL;?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('yakin mau hapus.?');">Hapus</a>
 				  	</li>
 				<?php endforeach; ?>
 			</ul>
@@ -68,7 +70,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class ="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Tambah data</button>
         </form>
       </div>
