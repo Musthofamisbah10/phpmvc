@@ -10,7 +10,7 @@
 		<div class="col-lg-6">
 
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+			<button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
 			  Tambah Data Mahasiswa
 			</button>
 			<br><br>
@@ -20,7 +20,7 @@
 				  	<li class="list-group-item ">
 				  		<?= $mhs['nama']; ?>
 				  		<a href="<?= BASEURL;?>/mahasiswa/detile/<?= $mhs['id']; ?>" class="badge badge-primary float-right ml-1">Detile</a>
-				  		<a href="<?= BASEURL;?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-1" data-toggle="modal" data-target="#formModal">Ubah</a>
+				  		<a href="<?= BASEURL;?>/mahasiswa/getubah/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-1 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mhs['id']; ?>">Ubah</a>
 				  		<a href="<?= BASEURL;?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('yakin mau hapus.?');">Hapus</a>
 				  	</li>
 				<?php endforeach; ?>

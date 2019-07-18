@@ -49,5 +49,11 @@ class Mahasiswa extends Controller {
 		}
 	}
 
+	// Ubah
+	public function getubah()
+	{
+		echo 'ok';
+	}
+
 
 }
