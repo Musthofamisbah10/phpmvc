@@ -11,6 +11,7 @@ class Mahasiswa extends Controller {
 		$this->view('templates/footer');	 
 	}
 
+	// method detile
 	public function detile ($id)
 	{
 		$data['judul'] = 'Detile Mahasiswa';
@@ -20,6 +21,7 @@ class Mahasiswa extends Controller {
 		$this->view('templates/footer');
 	}
 
+	// Tambah
 	public function tambah()
 	{
 		if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0){
@@ -32,4 +34,20 @@ class Mahasiswa extends Controller {
 			exit;
 		}
 	}
+
+	// Hapus
+	public function hapus($id)
+	{
+		if($this->model('Mahasiswa_model')->hapusDataMahasiswa($id) > 0){
+			Flasher::setFlash('Berhasil', 'dihapus', 'success');
+			header('Location: ' . BASEURL . '/mahasiswa');
+			exit;
+		} else {
+			Flasher::setFlash('Berhasil', 'didihapus', 'danger');
+			header('Location: ' . BASEURL . '/mahasiswa');
+			exit;
+		}
+	}
+
+
 }
