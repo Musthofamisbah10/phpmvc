@@ -1,6 +1,13 @@
 	<div class="container mt-3">
+
+		<!-- Flash -->
+		<div class="row">
+			<div class="col-lg6">
+				<?php Flasher::flash(); ?>
+			</div>
+		</div>
 	<div class="row">
-		<div class="col-6">
+		<div class="col-lg-6">
 
 			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
@@ -21,11 +28,11 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="judulModal" aria-hidden="true">
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="judulModal">Tambah Data</h5>
+        <h5 class="modal-title" id="formModalLabel">Tambah Data</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
